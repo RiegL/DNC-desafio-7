@@ -1,73 +1,85 @@
-Desafio 7
-Este projeto é uma API simples construída com Express.js e TypeScript, que interage com um banco de dados MySQL.
+# 🎉 Desafio 7
 
-Pré-requisitos
-Antes de começar, você precisará ter os seguintes itens instalados em sua máquina: Node.js (versão 14 ou superior) e MySQL (para o banco de dados).
+Bem-vindo ao Desafio 7! Este projeto é uma API simples construída com Express.js e TypeScript, projetada para interagir com um banco de dados MySQL. O objetivo é fornecer uma base sólida para desenvolvimento de APIs, integrando boas práticas e organização de código.
 
-Instalação
-Siga as etapas abaixo para configurar o projeto:
+🎯 Objetivo
+Aplicar conhecimentos em Typescript e Jest, para solucionar um dos maiores problemas que grandes empresas possui em relação a uma API feita em JavaScript. O intuito do projeto é aumentar a performace da API deixando a mais robusta e menos propensa a erros utilizando Typescript e JavaScript.
 
-Clone o repositório usando o comando git clone <URL do repositório>, em seguida, navegue até a pasta do projeto com cd desafio-tech-testes.
+📋 Pré-requisitos
+Antes de começar, você precisará ter o seguinte instalado em sua máquina:
 
-Instale as dependências do projeto com o comando npm install.
+- **Node.js** (versão 14 ou superior)
+- **MySQL** (para o banco de dados)
 
-Configure o banco de dados. Para isso, altere as configurações do banco de dados no arquivo de configuração do Knex (knexfile.js ou arquivo equivalente) para refletir suas credenciais. As configurações devem ser semelhantes ao seguinte exemplo:
+## ⚙️ Instalação
 
-export default {
-  client: "mysql2",
-  connection: {
-    host: "192.168.0.254", // alterar aqui
-    port: 3306,
-    user: "root", // alterar aqui
-    password: "hasarbrasil", // alterar aqui
-    database: "desafio7", // alterar aqui
-  },
-};
+### Siga os passos abaixo para configurar o projeto em sua máquina local:
+
+## Clone o repositório:
+
+    git clone https://github.com/RiegL/DNC-desafio-7.git
+    cd desafio7
+
+## Instale as dependências:
+
+    npm install
+
+## Configure o banco de dados:
+
+### Altere as configurações do banco de dados no arquivo de configuração do Knex (knexfile.js ou arquivo equivalente) para refletir suas credenciais:
+
+        export default {
+    client: "mysql2",
+    connection: {
+        host: "192.168.0.254", // alterar para seu host
+        port: 3306,
+        user: "root", // alterar para seu usuário
+        password: "hasarbrasil", // alterar para sua senha
+        database: "desafio7", // alterar para o nome do seu banco de dados
+    },
+    };
 
 
-Para iniciar o servidor, execute o comando npm start. O servidor estará rodando em http://localhost:8080.
+## Inicie o servidor:
 
-Para executar os testes, use o comando npm test.
+### Execute o seguinte comando para iniciar o servidor:
 
+    npm start
 
-Claro! Aqui está uma versão em texto contínuo e melhor formatada do seu README:
+    O servidor estará rodando em http://localhost:8080.
 
-Desafio 7
-Este projeto é uma API simples construída com Express.js e TypeScript, que interage com um banco de dados MySQL.
+##  📡 Rotas requisição
 
-Pré-requisitos
-Antes de começar, você precisará ter os seguintes itens instalados em sua máquina: Node.js (versão 14 ou superior) e MySQL (para o banco de dados).
+- **GET**: http://localhost:8080/aluno 
 
-Instalação
-Siga as etapas abaixo para configurar o projeto:
+- **POST**: http://localhost:8080/aluno 
 
-Clone o repositório usando o comando git clone <URL do repositório>, em seguida, navegue até a pasta do projeto com cd desafio-tech-testes.
+    Envie no body os campos nome e cpf.
 
-Instale as dependências do projeto com o comando npm install.
+## Executar testes:
 
-Configure o banco de dados. Para isso, altere as configurações do banco de dados no arquivo de configuração do Knex (knexfile.js ou arquivo equivalente) para refletir suas credenciais. As configurações devem ser semelhantes ao seguinte exemplo:
+### Para rodar os testes, utilize o comando:
 
-javascript
-Copiar código
-export default {
-  client: "mysql2",
-  connection: {
-    host: "192.168.0.254", // alterar aqui
-    port: 3306,
-    user: "root", // alterar aqui
-    password: "hasarbrasil", // alterar aqui
-    database: "desafio7", // alterar aqui
-  },
-};
-Para iniciar o servidor, execute o comando npm start. O servidor estará rodando em http://localhost:8080.
+    npm test
 
-Para executar os testes, use o comando npm test.
+## 📁 Estrutura do Projeto
 
-Estrutura do Projeto
-A estrutura do projeto é organizada da seguinte forma:
+### A estrutura do projeto é organizada da seguinte forma:
 
-src/: Contém o código-fonte da aplicação.
-src/server.ts: O arquivo principal que inicializa o servidor Express.
-src/module/aluno/aluno.route.ts: Define as rotas para o modelo aluno.
-Contribuição
-Sinta-se à vontade para contribuir com melhorias ou correções. Sua ajuda é sempre bem-vinda!
+- `src/`
+  - `config/`
+    - `knex.ts`
+  - `libs/`
+    - `__tests__/`
+        - `aluno.model.test.ts`
+        - `aluno.route.test.ts`
+  - `module/`
+    - `aluno/`
+        - `aluno.d.ts`
+        - `aluno.model.ts`
+        - `aluno.route.ts`
+  - `service/`
+    - `knex.ts`
+  - `server.ts`
+  
+   
