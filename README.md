@@ -1,7 +1,5 @@
 # 🎉 Desafio 7
 
-Bem-vindo ao Desafio 7! Este projeto é uma API simples construída com Express.js e TypeScript, projetada para interagir com um banco de dados MySQL. O objetivo é fornecer uma base sólida para desenvolvimento de APIs, integrando boas práticas e organização de código.
-
 🎯 Objetivo
 Aplicar conhecimentos em Typescript e Jest, para solucionar um dos maiores problemas que grandes empresas possui em relação a uma API feita em JavaScript. O intuito do projeto é aumentar a performace da API deixando a mais robusta e menos propensa a erros utilizando Typescript e JavaScript.
 
