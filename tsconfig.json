@@ -2,7 +2,9 @@
   "compilerOptions": {
     "outDir": "./dist",
     "allowJs": true,
-    "target": "es5",
+    "target": "es6",                        // Atualizado para es6
+    "module": "commonjs",                   // Definido explicitamente
+    "moduleResolution": "node",             // Adicionado para resolução de módulos
     "skipLibCheck": true,
     "esModuleInterop": true,
     "strict": true
